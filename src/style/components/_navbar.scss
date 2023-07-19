@@ -1,0 +1,49 @@
+/* Horizontal layouts */
+.horizontal-menu {
+  @apply hidden lg:flex;
+}
+.horizontal-logo {
+  @apply flex;
+}
+.main-container .main-content {
+  @apply ltr:ml-0 rtl:mr-0;
+}
+.sidebar {
+  @apply ltr:-left-[260px] rtl:-right-[260px];
+}
+.horizontal.toggle-sidebar .sidebar {
+  @apply ltr:left-0 rtl:right-0 lg:ltr:-left-[260px] lg:rtl:-right-[260px];
+}
+
+.nav-item a div:first-child svg {
+  @apply w-5 h-5 text-black/50 dark:text-white/50;
+}
+
+.dark.nav-item a div:first-child svg {
+  @apply text-white/50;
+}
+
+.horizontal-menu .nav-link {
+  @apply flex items-center py-2.5 px-2 rounded-lg hover:bg-[#000]/[0.08] hover:text-black dark:hover:bg-[#181f32] dark:hover:text-white-dark xl:px-4;
+}
+
+.horizontal-menu .nav-link.active {
+  @apply bg-[#000]/[0.08] text-black dark:bg-[#181f32] dark:text-white-dark;
+}
+
+.horizontal-menu ul.sub-menu {
+  @apply absolute top-full z-20 hidden min-w-[180px] rounded bg-white p-0 py-2 text-dark shadow dark:bg-[#1b2e4b] dark:text-white-dark;
+}
+
+.horizontal-menu ul.sub-menu a {
+  @apply flex items-center justify-between px-4 py-2 hover:bg-gray-100 hover:text-primary dark:hover:bg-primary/10;
+}
+
+.horizontal-menu ul.sub-menu a.active {
+  @apply bg-gray-100 text-primary dark:bg-primary/10;
+}
+
+.horizontal-menu > li.nav-item:hover > ul.sub-menu,
+.horizontal-menu > li.nav-item > ul.sub-menu > li:hover > ul {
+  @apply block;
+}

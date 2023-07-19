@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+// 字体
+@import url(./font.scss);
+
+@layer components {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-[#fafafa] font-ali;
+  }
+
+  body.dark {
+    @apply bg-[#060818];
+  }
+
+  .main-container .main-content {
+    @apply transition-all duration-300 lg:ml-[260px];
+  }
+
+  @import "components/button";
+  @import "components/typography";
+  @import "components/form";
+  @import "components/widget";
+  @import "components/table";
+  @import "components/navbar";
+}

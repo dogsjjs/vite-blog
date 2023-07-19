@@ -1,13 +1,20 @@
 <template>
-  <div class="w-full h-[100vh] flex items-center justify-center">
-    <span class="text-4xl text-blue-400">Vite + Tailwindcss + Typescript</span>
-  </div>
+	<div class="main-section antialiased relative font-ali text-sm font-normal">
+		<component v-bind:is="mainLayout"></component>
+	</div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
+import { computed } from 'vue';
 
+import appLayout from '@/Layout/AppLayout.vue';
+import authLayout from '@/Layout/AuthLayout.vue';
+
+import { useAppStore } from '@/stores/index';
+
+const store = useAppStore();
+
+const mainLayout = computed(() => {
+	return store.mainLayout === 'auth' ? authLayout : appLayout;
+});
 </script>
-
-<style scoped>
-
-</style>
