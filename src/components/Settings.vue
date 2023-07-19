@@ -21,19 +21,19 @@
               @click="showCustomizer = false">
               <Icon icon="heroicons:x-mark" />
             </a>
-            <h4 class="mb-1 dark:text-white">主题修改</h4>
+            <h6 class="mb-1 dark:text-white">主题修改</h6>
           </div>
           <div class="border border-dashed border-[#e0e6ed] dark:border-[#1b2e4b] rounded-md mb-3 p-3">
             <h5 class="mb-1 text-base dark:text-white leading-none">配色方案</h5>
             <div class="grid grid-cols-3 gap-2 mt-3">
-              <button type="button" class="btn" :class="[store.theme === 'light' ? 'btn-dark' : 'btn-outline-dark']"
+              <button type="button" class="btn btn-outline-primary flex items-center gap-2" :class="[store.theme === 'light' ? 'active' : '']"
                 @click="store.toggleTheme('light')">
-                <Icon class="w-5 h-5 shrink-0 mr-2" icon="heroicons:sun" />
+                <Icon class="w-5 h-5 shrink-0" icon="heroicons:sun" />
                 Light
               </button>
-              <button type="button" class="btn" :class="[store.theme === 'dark' ? 'btn-dark' : 'btn-outline-dark']"
+              <button type="button" class="btn btn-outline-primary flex items-center gap-2" :class="[store.theme === 'dark' ? 'active' : '']"
                 @click="store.toggleTheme('dark')">
-                <Icon class="w-5 h-5 shrink-0 mr-2" icon="heroicons:moon" />
+                <Icon class="w-5 h-5 shrink-0" icon="heroicons:moon" />
                 Dark
               </button>
             </div>

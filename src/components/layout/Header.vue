@@ -7,7 +7,7 @@
 					<router-link to="/" class="flex items-center justify-center shrink-0">
 						<img class="w-8 -ml-1 inline" src="/assets/images/logo.svg" alt="" />
 						<span
-							class="text-2xl ml-1.5 italic align-middle hidden md:inline">HBLOG</span>
+							class="text-2xl ml-1.5 italic align-middle hidden md:inline dark:text-white transition-all duration-300">HBLOG</span>
 					</router-link>
 
 					<a href="javascript:;"
